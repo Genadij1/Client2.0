@@ -17,7 +17,7 @@ class Client
             IPEndPoint serverEndPoint = (IPEndPoint)clientSocket.RemoteEndPoint;
             string serverIP = serverEndPoint.Address.ToString();
 
-            string clientMessage = "Привіт, сервере!";
+            string clientMessage = "Hello server!";
             clientSocket.Send(Encoding.ASCII.GetBytes(clientMessage));
 
             byte[] buffer = new byte[1024];
